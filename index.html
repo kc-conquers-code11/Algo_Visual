@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Algo Visual</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Dijkstra's Algorithm Visualizer</h1>
+    <p>Click to add nodes, Shift+drag to connect edges, and run Dijkstra to find shortest paths.</p>
+  </header>
+
+  <div id="controls">
+    <button onclick="resetGrid()">Clear Graph</button>
+    <button onclick="undoLastEdge()">Undo Edge</button>
+    <button onclick="randomWeights()">Random Weights</button>
+    <button onclick="runDijkstra()">Run Dijkstra</button>
+    <button onclick="downloadGraphData()">Export JSON</button>
+    <button onclick="downloadCanvasImage()">Download Image</button>
+    <label>Speed: <input type="range" id="speed" min="10" max="1000" value="200"></label>
+    <label>Start: <select id="startNode"></select></label>
+    <label>End: <select id="endNode"></select></label>
+    <label class="import-btn">
+      <input type="file" accept=".json" onchange="importGraphFromJSON(event)" style="display:none;">
+      <span>Import JSON</span>
+    </label>
+  </div>
+
+  <canvas id="graphCanvas" width="800" height="600"></canvas>
+
+  <div id="logPanel">
+    <h3>Explanation Log</h3>
+    <div id="logOutput"></div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Algo Visual  Tools | Built for clarity and interactivity | All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

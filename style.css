@@ -1,0 +1,118 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #1e1e2f;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  background: #282846;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2em;
+  color: #00d1ff;
+}
+
+header p {
+  margin: 5px 0 0;
+  font-size: 0.95em;
+  color: #ccc;
+}
+
+footer {
+  margin-top: 20px;
+  padding: 15px;
+  width: 100%;
+  background: #282846;
+  color: #aaa;
+  text-align: center;
+  font-size: 0.9em;
+  box-shadow: 0 -2px 4px rgba(0,0,0,0.5);
+}
+
+#controls {
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  background: #2d2d44;
+  width: 100%;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+canvas {
+  background: #fff;
+  margin-top: 10px;
+  touch-action: none;
+  max-width: 100%;
+  border: 3px solid #444;
+}
+
+button, select, input[type=range] {
+  padding: 10px;
+  background: #4461f2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #3350d1;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+#import-btn {
+  background: #4461f2;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#import-btn:hover {
+  background: #3350d1;
+}
+
+#speed {
+  width: 100px;
+}
+
+#logPanel {
+  max-height: 200px;
+  width: 90%;
+  margin-top: 20px;
+  padding: 10px;
+  background: #121222;
+  border: 1px solid #444;
+  overflow-y: auto;
+  font-family: monospace;
+  font-size: 14px;
+  color: #e0e0e0;
+}
+
+#logPanel h3 {
+  margin-top: 0;
+  color: #00d1ff;
+}
+
+#logOutput {
+  white-space: pre-wrap;
+}
